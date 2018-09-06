@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="col-md-4">
+    <h4>Cities</h4>  
+<P>{{range .data}}
+{{.}}
+{{end}}</P>
+
+  <form action="/view"> 
+  <select name="city"   >
+     <option>--Select--</option>
+      {{range .data}}       
+     <option value={{.}}>{{.}}</option>
+      {{end}}
+  <select>    
+ <input type="submit">
+ </form>
+    </div>
+</body>
+</html>
